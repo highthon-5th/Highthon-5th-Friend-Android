@@ -256,6 +256,6 @@ cmake-build-*/
 
 # End of https://www.gitignore.io/api/android,intellij,androidstudio
 
-# codeStyles - kkori
+# codeStyles
 .idea/codeStyles
 .idea/runConfigurations.xml
