@@ -132,6 +132,15 @@ abstract class BaseAdapter : RecyclerView.Adapter<BaseViewHolder>(){
         throw RuntimeException("Position $position not found in sections")
     }
 
+    override fun getItemCount(): Int {
+        var itemCount = 0
+        for (section in sections) {
+            itemCount += section.size
+        }
+
+        return itemCount
+    }
+
 /*    private val section_itemDetail = 0
 
     init {

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ui.activity.CreateGroupActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:text="그룹 개설"
+                      android:gravity="center"
+                      android:textColor="@android:color/white"
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginStart="12dp"
+              android:layout_marginEnd="12dp"
+              android:layout_marginTop="12dp"
+              android:text="관심분야"
+              android:textSize="16sp"
+              android:textColor="#424242"
+              app:layout_constraintEnd_toEndOf="parent" android:id="@+id/textView"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center"
+                  app:layout_constraintTop_toBottomOf="@+id/textView"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/linearLayout2">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/star"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_gravity="center">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:background="@drawable/burst"
+                           android:scaleType="center"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="16dp"
+                          android:text="연예인"
+                          android:textSize="12sp"
+                          android:textColor="#525252"
+                          android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/game"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_gravity="center">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:background="@drawable/game"
+                           android:scaleType="center"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="16dp"
+                          android:text="게임"
+                          android:textSize="12sp"
+                          android:textColor="#525252"
+                          android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/pass"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="14dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_gravity="center">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:background="@drawable/trophy"
+                           android:scaleType="center"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="16dp"
+                          android:text="대회"
+                          android:textSize="12sp"
+                          android:textColor="#525252"
+                          android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginTop="8dp"
+                  app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:id="@+id/linearLayout3">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/study"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_gravity="center">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:background="@drawable/books"
+                           android:scaleType="center"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="16dp"
+                          android:text="스터디"
+                          android:textSize="12sp"
+                          android:textColor="#525252"
+                          android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/exercise"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_gravity="center">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:background="@drawable/exercise"
+                           android:scaleType="center"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="16dp"
+                          android:text="운동"
+                          android:textSize="12sp"
+                          android:textColor="#525252"
+                          android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/more"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="14dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_gravity="center">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:background="@drawable/more"
+                           android:scaleType="center"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="16dp"
+                          android:text="기타"
+                          android:textSize="12sp"
+                          android:textColor="#525252"
+                          android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="그룹 이름"
+              app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginStart="14dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:textSize="16sp"
+              android:textColor="#424242"
+              android:layout_marginTop="16dp"
+              app:layout_constraintHorizontal_bias="1.0" android:id="@+id/textView4"/>
+
+    <EditText android:id="@+id/groupTitle"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="0.8"
+              android:inputType="text"
+              android:imeOptions="actionDone"
+              android:background="@drawable/whiteline"
+              android:layout_marginEnd="14dp"
+              android:layout_marginTop="8dp"
+              android:paddingTop="16dp"
+              android:paddingBottom="16dp"
+              android:paddingStart="12dp"
+              android:paddingEnd="12dp"
+              android:hint="16자 이내로 작성하세요."
+              android:textSize="14sp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/textView4"
+              android:layout_marginStart="14dp"
+              app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="그룹 소개"
+              android:textSize="16sp"
+              android:textColor="#424242"
+              app:layout_constraintTop_toBottomOf="@+id/groupTitle"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginTop="12dp"
+              android:layout_marginStart="14dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginEnd="14dp" android:id="@+id/textView6"/>
+
+    <EditText android:id="@+id/groupIntroduce"
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="0.8"
+              android:gravity="top"
+              android:inputType="text"
+              android:imeOptions="actionDone"
+              android:background="@drawable/whiteline"
+              android:layout_marginEnd="14dp"
+              android:paddingTop="16dp"
+              android:paddingBottom="16dp"
+              android:paddingStart="12dp"
+              android:paddingEnd="12dp"
+              android:hint="50자 이내로 작성하세요."
+              android:textSize="14sp"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginStart="14dp"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginTop="8dp"
+              app:layout_constraintTop_toBottomOf="@+id/textView6" android:layout_marginBottom="8dp"
+              app:layout_constraintBottom_toTopOf="@+id/making"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/making"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="36dp"
+            android:layout_marginBottom="26dp"
+            app:layout_constraintTop_toBottomOf="@+id/groupIntroduce"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="36dp"
+            android:text="등록하기"
+            android:background="@drawable/blueblue"
+            android:textSize="15sp"
+            android:textColor="#ffffff"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
